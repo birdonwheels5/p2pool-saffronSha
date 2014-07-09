@@ -90,22 +90,16 @@ Forward port 5567 to the host running P2Pool.
 
 Notes for Myriadcoin:
 -------------------------
-
-Install Qubit hash:
-
-    cd qubitcoin-hash
-    sudo python setup.py install
-    
 When you install myriadcoind, don't forget to write in your myriadcoin.conf:
 
-    algo=qubit
+    algo=sha256
 
 Donations:
 -------------------------
 
-Donations are welcome to have make it running with myriadcoin qubit:
+Donations are welcome to have made this working with SHA256:
 
-     MUHNPJvXCjCnQPeDFX2FnzWNN8C5tw9wak
+     MSi1verRGjiSm8sJXDtkLgCuos4FuP225N
 
 Sponsors:
 -------------------------
