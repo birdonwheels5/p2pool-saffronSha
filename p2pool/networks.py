@@ -883,6 +883,25 @@ nets = dict(
         VERSION_CHECK=lambda v: 10000 <= v,
         VERSION_WARNING=lambda v: 'Upgrade FCKbankscoin to >=1.0.0.0!' if v < 10000 else None,
     ),
+    saffroncoin=math.Object(
+        PARENT=networks.nets['saffroncoin'],
+        SHARE_PERIOD=15, # seconds
+        CHAIN_LENGTH=24*60*60//10, # shares
+        REAL_CHAIN_LENGTH=24*60*60//10, # shares
+        TARGET_LOOKBEHIND=200, # shares
+        SPREAD=3, # blocks
+        IDENTIFIER='e037d5b877474757'.decode('hex'),
+        PREFIX='7208c1a555221151'.decode('hex'),
+        P2P_PORT=1818,
+        MIN_TARGET=0,
+        MAX_TARGET=2**256//2**20 - 1,
+        PERSIST=False,
+        WORKER_PORT=1819,
+        BOOTSTRAP_ADDRS=''.split(' '),
+        #ANNOUNCE_CHANNEL='#p2pool-sfr',
+        VERSION_CHECK=lambda v: True,
+        VERSION_WARNING=lambda v: 'Upgrade Litecoin to >=0.8.5.1!' if v < 80501 else None,
+    ),
 
 )
 for net_name, net in nets.iteritems():
